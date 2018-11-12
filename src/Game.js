@@ -1,4 +1,5 @@
 import React from "react";
+import Hellow from "./Hellow";
 
 /**
  * 计算赢家的方法（有一方的棋子连成一条线就赢了）
@@ -17,6 +18,7 @@ function calculateWinner(squares) {
     ];
     for (let i = 0; i < lines.length; i++) {
         const [a, b, c] = lines[i];
+        //- 如果a、b、c这些位置上的元素相同，就表示连成了一线
         if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
             return squares[a];
         }
@@ -139,9 +141,47 @@ class Game extends React.Component {
                     <div>{status}</div>
                     <ol>{moves}</ol>
                 </div>
+                <div className="timer">
+                    <Timer/>
+                </div>
+                <div>
+                    <Hellow/>
+                </div>
             </div>
         );
     }
+}
+
+class Timer extends React.Component{
+
+    constructor(props){
+        super(props);
+        this.state = {
+            seconds: 0
+        }
+    }
+
+    tick() {
+        // console.log(new Date());
+        // this.setState(prevState => ({
+        //     seconds: prevState.seconds + 1
+        // }));
+    }
+
+    componentDidMount() {
+        this.interval = setInterval(() => this.tick(), 1000);
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.interval);
+    }
+
+    render(){
+        return(
+            <div>秒数: {this.state.seconds}</div>
+        );
+    };
+
 }
 
 export default Game;
