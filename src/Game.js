@@ -141,47 +141,12 @@ class Game extends React.Component {
                     <div>{status}</div>
                     <ol>{moves}</ol>
                 </div>
-                <div className="timer">
-                    <Timer/>
-                </div>
                 <div>
                     <Hellow/>
                 </div>
             </div>
         );
     }
-}
-
-class Timer extends React.Component{
-
-    constructor(props){
-        super(props);
-        this.state = {
-            seconds: 0
-        }
-    }
-
-    tick() {
-        // console.log(new Date());
-        // this.setState(prevState => ({
-        //     seconds: prevState.seconds + 1
-        // }));
-    }
-
-    componentDidMount() {
-        this.interval = setInterval(() => this.tick(), 1000);
-    }
-
-    componentWillUnmount() {
-        clearInterval(this.interval);
-    }
-
-    render(){
-        return(
-            <div>秒数: {this.state.seconds}</div>
-        );
-    };
-
 }
 
 export default Game;

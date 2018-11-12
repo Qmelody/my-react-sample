@@ -30,7 +30,7 @@ class Hellow extends React.Component{
                 opacity:opacity
             });
             // 在定时器中绑定this，确保每次this指向一样
-        }.bind(this),3000);
+        }.bind(this),300);
     }
 
     render(){
