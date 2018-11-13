@@ -1,22 +1,20 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Game from "./Game";
+import Timer from "./demo/Timer";
 import "./index.css";
-import Timer from "./Timer";
-import Hello from "./Hello";
 
-
+//- 渲染挂载组件
 ReactDOM.render(
     <div>
         <div>
-            <Game/>
-        </div>
-        <div className="timer">
-            <Timer/>
+            {/*<Game/>*/}
         </div>
         <div>
-            <Hello/>
+            <Timer/>
         </div>
     </div>,
     document.getElementById('root')
 );
+
+//- 解除挂载，清除组件
+// ReactDOM.unmountComponentAtNode(document.getElementById('root'));

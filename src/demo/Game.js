@@ -1,5 +1,4 @@
 import React from "react";
-import Hellow from "./Hellow";
 
 /**
  * 计算赢家的方法（有一方的棋子连成一条线就赢了）
@@ -140,9 +139,6 @@ class Game extends React.Component {
                 <div className="game-info">
                     <div>{status}</div>
                     <ol>{moves}</ol>
-                </div>
-                <div>
-                    {/*<Hellow/>*/}
                 </div>
             </div>
         );
