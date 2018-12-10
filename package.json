@@ -17,7 +17,8 @@
     "redux-devtools": "^3.4.1",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
-    "wijmo": "^5.20182.500"
+    "wijmo": "^5.20182.500",
+    "antd": "^3.11.2"
   },
   "scripts": {
     "start": "set PORT=3001 && react-scripts start",

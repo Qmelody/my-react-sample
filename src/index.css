@@ -87,3 +87,7 @@ img{
     top: 150px;
     align: middle;
 }
+
+.hide {
+    display: none;
+}

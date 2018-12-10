@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
 
+/**
+ * 父组件调用子组件方法
+ */
 class Parent extends Component {
     render() {
         return(
