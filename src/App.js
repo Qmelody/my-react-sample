@@ -1,6 +1,6 @@
 import React from "react";
 import "./index.css";
-
+import store from './store';
 class Square extends React.Component{
     render(){
         return(
@@ -20,6 +20,11 @@ class Board extends React.Component{
     }
 
     handleClick(i){
+
+        let state = store.getState();
+        console.log(state);
+        alert(state.myReducer.name);
+
         const squareArr = this.state.squares.slice();
 
         if (squareArr[i]){

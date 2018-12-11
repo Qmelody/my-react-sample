@@ -1,24 +1,16 @@
-import React from "react";
-import ReactDOM from "react-dom";
-// import Timer from "./demo/Timer";
+import React from 'react';
+import {render} from 'react-dom';
+import {Provider} from "react-redux";
+import store from './store';
 import "./index.css";
-// import Parent from "./demo/Parent";
-// import reducer from "./reducers";
-import ReactTableDemo from "./demo/ReactTableDemo";
-// import {createStore} from "redux";
+import App from "./App";
 
-// const store = createStore(reducer);
-
-//- 渲染挂载组件
-ReactDOM.render(
-    <div>
+render(
+    <Provider store={store}>
         <div>
-            {/*<Game/>*/}
+            <h2 align="center">Redux试水</h2>
+            <App/>
         </div>
-        <div>
-            {/*<Timer/>*/}
-            <ReactTableDemo/>
-        </div>
-    </div>,
+    </Provider>,
     document.getElementById('root')
 );
