@@ -4,7 +4,8 @@ const myReducer = (state = {name: 'lee ming'}, action) => {
     switch (action.type){
 
         case ONE:
-            state.name = "one";
+            alert("one");
+            state.name = action.data;
             return state;
 
         case TWO:

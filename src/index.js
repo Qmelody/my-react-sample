@@ -3,14 +3,14 @@ import {render} from 'react-dom';
 import {Provider} from "react-redux";
 import store from './store';
 import "./index.css";
-import App from "./App";
+import {HashRouter} from "react-router-dom";
+import Application from "./Application";
 
 render(
     <Provider store={store}>
-        <div>
-            <h2 align="center">Redux试水</h2>
-            <App/>
-        </div>
+        <HashRouter>
+            <Application/>
+        </HashRouter>
     </Provider>,
     document.getElementById('root')
 );

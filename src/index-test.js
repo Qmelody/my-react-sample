@@ -2,9 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 // import Timer from "./demo/Timer";
 import "./index.css";
-// import Parent from "./demo/Parent";
-// import reducer from "./reducers";
-import ReactTableDemo from "./demo/ReactTableDemo";
+import Game from "./demo/Game";
+import App from "./App";
 // import {createStore} from "redux";
 
 // const store = createStore(reducer);
@@ -13,11 +12,12 @@ import ReactTableDemo from "./demo/ReactTableDemo";
 ReactDOM.render(
     <div>
         <div>
-            {/*<Game/>*/}
+            <Game/>
         </div>
+        <br/>
         <div>
             {/*<Timer/>*/}
-            <ReactTableDemo/>
+            <App/>
         </div>
     </div>,
     document.getElementById('root')
