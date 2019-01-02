@@ -16,7 +16,8 @@ const Content = () => {
 };
 
 
-const User = () => { return <h1>Hello world!</h1>
+const User = () => {
+    return <h1>Hello world!</h1>
 };
 
 export default Content;
