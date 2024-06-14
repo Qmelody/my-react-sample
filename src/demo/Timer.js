@@ -95,7 +95,7 @@ class Timer extends React.Component{
                     <font  face="隶书" size="5">行尽天涯静默山水间，倾听晚风拂柳笛声残</font>
                 </marquee>
                 <hr/>
-                <img className="img" src={pic}/>
+                <img className="img" src={pic} alt="kuma"/>
             </div>
         );
     };

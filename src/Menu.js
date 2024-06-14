@@ -14,7 +14,7 @@ const Menu = () => {
                 <li><NavLink to="/timer" replace >定时器Timer</NavLink></li>
                 <li><NavLink to="/user" replace >用户管理User</NavLink></li>
             </ul>
-            <div className='clear'>----------------------------------------------------------------------------------------------</div>
+            <div className='clear'><br/></div>
         </div>
     );
 };

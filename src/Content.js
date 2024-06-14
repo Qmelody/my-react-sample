@@ -1,7 +1,7 @@
 import React from "react";
 import {Route, Switch} from "react-router-dom";
 import Timer from "./demo/Timer";
-import NameForm from "./demo/Parent";
+import NameForm from "./demo/NameForm";
 import Game from "./demo/Game";
 
 const Content = () => {

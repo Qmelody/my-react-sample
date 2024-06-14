@@ -7,13 +7,17 @@ class Parent extends Component {
     render() {
         return(
             <div>
+                <h3>Parent start</h3>
                 <Child onRef={this.onRef} />
-                <button onClick={this.click} >click</button>
+                <br/>
+                <button onClick={this.click} > Parent Button </button>
+                <h3>Parent end</h3>
             </div>
         )
     }
 
     onRef = (ref) => {
+        // 保存子组件的引用，方便调用子组件方法
         this.child = ref;
     }
 
@@ -29,10 +33,20 @@ class Child extends Component {
         this.props.onRef(this)
     }
 
-    myName = () => alert('flippy')
+    myName = () => alert('Parent call Child method alert!')
+
+    click = (e) => {
+        alert('Child Button')
+    }
 
     render() {
-        return ('BUTTON');
+        return (
+            <div>
+                <h4>Child start</h4>
+                <button onClick={this.click} > Child Button </button>
+                <h4>Child end</h4>
+            </div>
+        );
     }
 }
 
@@ -56,13 +70,16 @@ export default class NameForm extends React.Component {
 
     render() {
         return (
-            <form onSubmit={this.handleSubmit}>
-                <label>
-                    Name:
-                    <input type="text" value={this.state.value} onChange={this.handleChange} />
-                </label>
-                <input type="submit" value="Submit" />
-            </form>
+            <div>
+                <form onSubmit={this.handleSubmit}>
+                    <label>
+                        Name:
+                        <input type="text" value={this.state.value} onChange={this.handleChange} />
+                    </label>
+                    <input type="submit" value="Submit" />
+                </form>
+                <Parent />
+            </div>
         );
     }
 }
