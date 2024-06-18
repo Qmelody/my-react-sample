@@ -60,6 +60,7 @@ export default class NameForm extends React.Component {
     }
 
     handleChange(event) {
+        // 必要的，否则输入框无法输入
         this.setState({value: event.target.value});
     }
 
